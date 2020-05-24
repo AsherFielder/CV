@@ -49,19 +49,37 @@ A.class4:visited {text-decoration: none; color: black;}
 A.class4:hover {text-decoration: none; color: black;}
 A.class4:active {text-decoration: none; color: black;}  
 
-.center-div p
-{
-     position: relative;
-     top: 50%;
-     transform: perspective(1px) translateY(-50%);
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  
+}
+
   
 </style>
 </head>
 <body>
-<h1 style="font-size:7vw"><div>Howdy,<br> My name is Asher</a>. I am a student who specialises in <a href="help.html" class="class1">marketing</a> and <a href="help.html" class="class1">branding.</a>
- <div/></h1>
-
-
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
+<h1 style="font-size:7vw">Howdy,<br> My name is Asher</a>. I am a student who specialises in <a href="help.html" class="class1">marketing</a> and <a href="help.html" class="class1">branding</a> </h1>
+</div>
+  </div>
+</div>
 </body>
 </html>
