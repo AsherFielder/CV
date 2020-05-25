@@ -2,82 +2,68 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
 <style>
 
 body {
   background-color: #f4837d;
 }
 
+h1 {
+font-family: HELVETICA;
+  color: #27363b;
+  text-align: center;
+  font-size: 40px
+
+}
+
+p {
+  font-family: Courier New;
+  font-size: 1.5vw;
+  color: black;
+  text-align: right;
+}
+  
 A.class1 {color:#27363b;}
 A.class1:link  {text-decoration: none; color: #27363b; background-color: #fdceaa;}
 A.class1:visited {text-decoration: none; color: #27363b; background-color: #fdceaa;}
 A.class1:hover {text-decoration: none; color: #27363b; background-color: #eb4960;}
 A.class1:active {text-decoration: none; color: #27363b; background-color: #fdceaa;}
 
-  
-h1 {
-font-family: HELVETICA;
-  color: #27363b;
-  text-align: left;
-  font-size: 6vw
-  }
-p { 
-  font-family: HELVETICA;
-  color: #27363b;
-  text-align: left;
-  font-size: 4vw
-  }
-  
-  div {
-  padding-top: 4vw;
-  padding-right: 4vw;
-  padding-bottom: 4vw;
-  padding-left: 4vw;
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
-    
-    
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
+  
+}
+
+  
 </style>
 </head>
 <body>
- <div>
-<h1><u> Marketing </u> <h1/>
-  
-  <p>
-  I am currently a third year media and marketing student at the University of Wollongong. My marketing specialties include cross platform campaigns, search engine optimisation, stratergy and product development. <br><br>
-    My marketing experience includes owning and operating <a href="http://www.fieldsnow.com" class="class1">FIELD SNOW</a>, 
-    and leading <a href="http://www.choptstudio.com.au" class="class1">Chopt Studio</a>'s marketing. <br> <br>
-   
-    
-<p><a STYLE="background-color: #fdceaa;" onclick="javascript:ShowHide('HiddenDiv')" class="class1">⬇⬇⬇</a></p>
-<div class="mid" id="HiddenDiv" style="display: none;"><font face="Arial"
-
-color="#27363b" align="right">
-    
-     In building <a href="http://www.fieldsnow.com" class="class1">FIELD SNOW</a>, I ran all product development, branding, 
-    marketing, logistics, and SEO. FIELD had an extremily successful first year, completely selling out with orders being shipped 
-    to Australia, New Zealand, and Japan. In the aftermath of Covid-19, FIELD is currently on hold due to supply chain issues 
-    and concern over the upcoming ski season in Australia.
-    <br> <br>
-    
-    In my work for <a href="http://www.choptstudio.com.au" class="class1">Chopt Studio</a> I have rebuilt the brands online presence,
-    identified and reached the appropriate target market and developed an appropriate plan for the future. <br><br>
+  <p>Made with ❤ by Asher.Fi</p>
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
+<h1 style="font-size:5vw">Howdy,<br> My name is Asher</a>. 
+  I specialize in <a href="marketing.html" class="class1">marketing</a> and <a href="branding.html" class="class1">branding</a>. 
+      I also do some recreational <a href="webdev.html" class="class1"> web development<a/>.</h1> 
 </div>
-<script type="text/javascript">// <![CDATA[
-function ShowHide(divId)
-{
-if(document.getElementById(divId).style.display == 'none')
-{
-document.getElementById(divId).style.display='block';
-}
-else
-{
-document.getElementById(divId).style.display = 'none';
-}
-}
-// ]]></script>    
-    
-    
-    
- <a href="index.html" class="class1">⇪ Take me home! ⇪</a>
-  <div/>
+  </div>
+</div>
+</body>
+</html>
