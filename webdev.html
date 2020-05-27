@@ -27,6 +27,40 @@ p {
 p {
   padding: 3vw;
 }
+
+  body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f4837d;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #27363b;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: HELVETICA;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #f4837d;
+}
   
 A.class1 {color:#27363b;}
 A.class1:link  {text-decoration: none; color: #27363b; background-color: #f4837d;}
@@ -39,6 +73,14 @@ A.class1:active {text-decoration: none; color: #27363b; background-color: #f4837
 </style>
 </head>
 <body>
+
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="Marketing.html">Marketing</a></li>
+  <li><a href="branding.html">Branding</a></li>
+  <li><a href="Contact.html">Contact</a></li>
+</ul>
+
 <div class="outer">
   <div class="middle">
     <div class="inner">
@@ -50,8 +92,7 @@ A.class1:active {text-decoration: none; color: #27363b; background-color: #f4837
     <p><a href="https://fieldsnow.com" class="class1">FIELD SNOW</a><br><br>
     <a href="https://choptstudio.com.au" class="class1">Chopt Studio</a><br><br>
     <a href="https://asher.fi" class="class1"> Asher.FI</a> <br><br>
-    <a href="index.html" class="class1">↑↑ Take me home! ↑↑</a>
-    
+
     </p>
 
 </body>
