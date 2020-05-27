@@ -24,6 +24,40 @@ p {
   padding: 3vw;
 }
 
+  body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f4837d;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #27363b;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: HELVETICA;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #f4837d;
+}
+
 A.class1 {color:#27363b;}
 A.class1:link  {text-decoration: none; color: #27363b; background-color: #f4837d;}
 A.class1:visited {text-decoration: none; color: #27363b; background-color: #f4837d;}
@@ -35,6 +69,12 @@ A.class1:active {text-decoration: none; color: #27363b; background-color: #f4837
 </head>
 <body>
 
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="Marketing.html">Marketing</a></li>
+  <li><a href="webdev.html">Web Dev</a></li>
+  <li><a href="Contact.html">Contact</a></li>
+</ul>
 
 <h1 style="font-size:5vw"><u>Branding</u><br></h1> 
   <p>My branding expience includes building the <a href="https://fieldsnow.com" class="class1">FIELD SNOW</a> brand, and working as a consultant for <a href="https://choptstudio.com.au" class="class1">Chopt Studio</a>.<br><br>
