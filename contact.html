@@ -50,17 +50,18 @@
     let buttonClicked = false;
 
     function moveButton() {
-      if (!buttonClicked) {
-        const btn = document.querySelector('.btn');
-        const xPos = Math.floor(Math.random() * (window.innerWidth - btn.offsetWidth));
-        const yPos = Math.floor(Math.random() * (window.innerHeight - btn.offsetHeight));
-        btn.style.position = 'absolute';
-        btn.style.left = xPos + 'px';
-        btn.style.top = yPos + 'px';
+      const btn = document.querySelector('.btn');
+      const xPos = Math.floor(Math.random() * (window.innerWidth - btn.offsetWidth));
+      const yPos = Math.floor(Math.random() * (window.innerHeight - btn.offsetHeight));
+      btn.style.position = 'absolute';
+      btn.style.left = xPos + 'px';
+      btn.style.top = yPos + 'px';
 
+      if (!buttonClicked) {
         buttonClicked = true;
-      } else {
-        document.querySelector('.error-msg').style.display = 'block';
+        setTimeout(() => {
+          document.querySelector('.error-msg').style.display = 'block';
+        }, 0);
       }
     }
 
