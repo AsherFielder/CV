@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enigmatic Landing Page</title>
+  <title>ASHER ROCKS</title>
   <style>
     body, html {
       margin: 0;
@@ -11,47 +11,75 @@
       font-family: Arial, sans-serif;
       height: 100%;
       background-color: #FFF;
+      overflow-x: hidden;
     }
-	  .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
 
-img {
-  width: 40%;
-  max-width: 100%;
-}
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      position: relative;
+    }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #3b88c3;
-  color: #FFF;
-  text-decoration: none;
-  font-size: 1.2em;
-}
+    img {
+      width: 40%;
+      max-width: 100%;
+      transition: transform 0.3s ease;
+    }
 
-	  
-      </style>
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #3b88c3;
+      color: #FFF;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .error-msg {
+      display: none;
+      color: red;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+  </style>
   <script>
+    let buttonClicked = false;
+
     function moveButton() {
-      const btn = document.querySelector('.btn');
-      const xPos = Math.floor(Math.random() * (window.innerWidth - btn.offsetWidth));
-      const yPos = Math.floor(Math.random() * (window.innerHeight - btn.offsetHeight));
-      btn.style.position = 'absolute';
-      btn.style.left = xPos + 'px';
-      btn.style.top = yPos + 'px';
+      if (!buttonClicked) {
+        const btn = document.querySelector('.btn');
+        const xPos = Math.floor(Math.random() * (window.innerWidth - btn.offsetWidth));
+        const yPos = Math.floor(Math.random() * (window.innerHeight - btn.offsetHeight));
+        btn.style.position = 'absolute';
+        btn.style.left = xPos + 'px';
+        btn.style.top = yPos + 'px';
+
+        buttonClicked = true;
+      } else {
+        document.querySelector('.error-msg').style.display = 'block';
+      }
     }
+
+    function resizeImageOnScroll() {
+      const img = document.querySelector('img');
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      img.style.transform = `scale(${1 + scrollTop / 1000})`;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      window.addEventListener("scroll", resizeImageOnScroll);
+    });
   </script>
 </head>
 <body>
   <div class="container">
-    <img src="EYRELOGO.gif" alt="lmao">
+    <img src="center_image.jpg" alt="Mysterious Image">
     <a href="#" class="btn" onclick="moveButton()">Contact</a>
+    <div class="error-msg">lmao try again...</div>
   </div>
 </body>
 </html>
