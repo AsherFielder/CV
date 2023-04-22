@@ -1,94 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="FAVICON.png" type="image/x-icon">  
-<title>Contact.</title>
-<style>body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigmatic Landing Page</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+      background-color: #FFF;
+    }
+	  .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.navbar {
-  overflow: hidden;
-  background-color: #27363b;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+img {
+  width: 40%;
+  max-width: 100%;
 }
 
-.navbar a {
-  float: left;
-  display: block;
-  color: #fdceaa;
-  text-align: center;
-  padding: 14px 16px;
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3b88c3;
+  color: #FFF;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.2em;
 }
 
-.navbar a:hover {
-  background: #27363b;
-  color: #fdceaa;
-}
-
-.navbar a.active {
-  background-color: #27363b;
-  color: #fdceaa;
-}
-
-.main {
-  padding: 16px;
-  margin-bottom: 30px;
-}
-
-body {
-  background-color: #f4837d;
-}
-
-h1 {
-font-family: HELVETICA;
-  color: #27363b;
-  text-align: center;
-  font-size: 100
-	
-
-}
-
-p {
-  font-family: Helvetica;
-  font-size: 4.1vw;
-  color: #27363b;
-  text-align: center;
-}
-  
-A.class1 {color:#27363b;}
-A.class1:link  {text-decoration: none; color: #27363b; background-color: #fdceaa;}
-A.class1:visited {text-decoration: none; color: #27363b; background-color: #fdceaa;}
-A.class1:hover {text-decoration: none; color: #27363b; background-color: #eb4960;}
-A.class1:active {text-decoration: none; color: #27363b; background-color: #fdceaa;}
-
-	div1 {
-  padding: 5vw 5vw 5vw 5vw;
-}
-		img {
-  width: 60%;
-}
-
-  
-</style>
+	  
+      </style>
+  <script>
+    function moveButton() {
+      const btn = document.querySelector('.btn');
+      const xPos = Math.floor(Math.random() * (window.innerWidth - btn.offsetWidth));
+      const yPos = Math.floor(Math.random() * (window.innerHeight - btn.offsetHeight));
+      btn.style.position = 'absolute';
+      btn.style.left = xPos + 'px';
+      btn.style.top = yPos + 'px';
+    }
+  </script>
 </head>
-<body> 
-<div class="navbar">
-  <a href="https://www.asher.fi/" class="active">HOME</a>
-  <a href="cv.pdf">CV</a>
-
-</div>	
-	<div>
-  <br><br>
-
-	<h1 style="font-size:5vw">Contact.</h1> <br>
-		<p>Email: afielder98@gmail.com<br>Phone: 0409 653 003<br><br><br><br><br>
-		</div>
+<body>
+  <div class="container">
+    <img src="center_image.jpg" alt="Mysterious Image">
+    <a href="#" class="btn" onclick="moveButton()">Contact</a>
+  </div>
 </body>
 </html>
