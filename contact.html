@@ -24,9 +24,15 @@
     }
 
     img {
-      width: 40%;
+      width: 70%;
       max-width: 100%;
       transition: transform 0.3s ease;
+    }
+
+    @media (min-width: 768px) {
+      img {
+        width: 40%;
+      }
     }
 
     .btn {
@@ -47,7 +53,7 @@
     }
   </style>
   <script>
-    let buttonClicked = false;
+    let buttonClickCount = 0;
 
     function moveButton() {
       const btn = document.querySelector('.btn');
@@ -57,11 +63,17 @@
       btn.style.left = xPos + 'px';
       btn.style.top = yPos + 'px';
 
-      if (!buttonClicked) {
-        buttonClicked = true;
-        setTimeout(() => {
-          document.querySelector('.error-msg').style.display = 'block';
-        }, 0);
+      buttonClickCount++;
+
+      const errorMsg = document.querySelector('.error-msg');
+      errorMsg.style.display = 'block';
+
+      if (buttonClickCount === 1) {
+        errorMsg.textContent = "Click the button 50 times to access Peter's email";
+      } else if (buttonClickCount === 2) {
+        errorMsg.textContent = "Click the button 1000 times to access Peter's email";
+      } else {
+        errorMsg.textContent = "lmao Peter is busy, try again later";
       }
     }
 
@@ -80,7 +92,7 @@
   <div class="container">
     <img src="EYRELOGO.gif" alt="lmao">
     <a href="#" class="btn" onclick="moveButton()">Contact</a>
-    <div class="error-msg">lmao try again...</div>
+    <div class="error-msg"></div>
   </div>
 </body>
 </html>
