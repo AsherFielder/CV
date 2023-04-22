@@ -73,9 +73,11 @@
       if (buttonClickCount === 1) {
         errorMsg.textContent = "To prevent SPAM, please click this button 50 times to access Peter's email.";
       } else if (buttonClickCount === 2) {
+        errorMsg.textContent = "Keep going!";
+      } else if (buttonClickCount === 3) {
         errorMsg.textContent = "To prevent SPAM, please click this button 1,000 times to access Peter's email.";
       } else {
-        errorMsg.textContent = "lmao Peter is busy, try again later";
+        errorMsg.textContent = "lol Peter is busy";
       }
     }
 
